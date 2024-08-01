@@ -1,0 +1,486 @@
+/*ini CSS*/
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Mulish", sans-serif;
+}
+
+/*navigasi header*/
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0376c1;
+    color: white;
+    padding: 0 10%;
+}
+  
+.logo-header {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+  
+.navbar-links {
+    height: 100%;
+}
+  
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+  
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+  
+.navbar-links li:hover {
+    background-color: #248ace;
+}
+
+/*navigasi button responsive*/
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+  
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/*navigasi responsive*/
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+    }
+  
+    .toggle-button {
+        display: flex;
+    }
+  
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+  
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+  
+    .navbar-links ul li {
+        justify-content: flex-start;
+        width: 100%;
+    }
+  
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+  
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+/*banner tittle*/
+.main-banner {
+    display: flex;
+    background-image: url(https://i.ibb.co.com/2jP2v0c/header.jpg);
+    background-size: cover;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-banner-title {
+    color: #f6f9f9;
+    font-size: 30px;
+    text-align: center ;
+}
+  
+.main-banner-title h1 {
+    margin: 30px;
+}
+  
+.main-banner-title p {
+    margin-bottom: 15px;
+}
+
+/*main content*/
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    padding: 12px 10%;
+    gap: 30px;
+}
+
+.main-content-item {
+    border: 1px solid;
+    flex: 60%;
+}
+
+/*auto slider image*/
+#slider{
+    margin:0 auto;
+    width:100%;
+    overflow:hidden;
+}
+  
+.slides{
+    overflow:hidden;
+    animation-name:fade;
+    animation-duration:1s;
+    display:none;
+}
+  
+.slides > img {
+    width:100%;
+    height: 250px;
+}
+  
+#dot{
+    margin:0 auto;
+    text-align:center;
+}
+
+.dot {
+    display:inline-block;
+    border-radius:50%;
+    background:#d3d3d3;
+    padding:8px;
+    margin:10px 5px;
+  }
+  
+.actived {
+    background:black;
+}
+  
+@media (max-width:600px){
+    #slider{
+      width:100%;
+  
+    }
+}
+
+@keyframes fade{
+    from{
+      opacity:0.4;
+    }
+    to{
+      opacity:1;
+    }
+}
+  
+
+.main-info {
+    padding: 20px 0 0 35px;
+    font-size: 17px;
+}
+
+.main-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0 0 35px;
+    font-size: 12px;
+}
+
+.item-icon {
+    height: 40px;
+    width: 40px;
+    background-image: url(https://i.ibb.co.com/DL44Srk/icon-human.jpg);
+    filter: invert(27%) sepia(72%) saturate(2202%) hue-rotate(185deg) brightness(98%) contrast(98%);
+    background-size: cover;
+    border: 1px solid #8f8e8e;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+/*deviding line for main item and content list*/
+.aSeparator {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+   }
+  
+.line {
+    border: 1px solid #9bb2cf;
+    width: 25%;
+    margin: 30px 0px;
+    border-radius: 3px;
+}   
+
+/*content list*/
+.main-content-list {
+    padding: 20px 0 50px 0;
+    font-size: 20px;
+}
+
+.list-info {
+    display: flex;
+    align-items: center;
+    padding: 20px 0 0 0;
+    font-size: 17px;
+    padding-bottom: 10px;
+}
+
+.list-info > .list-icon-1 {
+    height: 70px;
+    width: 70px;
+    background-image: url(https://i.ibb.co.com/yhNwyjf/icon-number-1.png);
+    background-size: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.list-info > .list-icon-2 {
+    height: 70px;
+    width: 70px;
+    background-image: url(https://i.ibb.co.com/ZXmM8DH/icon-number-2.png);
+    background-size: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.list-info > .list-icon-3 {
+    height: 70px;
+    width: 70px;
+    background-image: url(https://i.ibb.co.com/86Zm0h4/icon-number-3.png);
+    background-size: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+/*form content about*/
+.main-content-about {
+    border-radius: 5px;
+    border: 1px solid;
+    flex: 35%;
+    background-color: #9cc7e3;
+    height: fit-content;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.main-content-about > p {
+    font-size: 11px;
+    padding: 10px 0 35px 0px;
+}
+  
+input[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+  
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 10px;
+    background-color: #fff;
+}
+  
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 10px;
+}
+  
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+  
+.error-message {
+    color: red;
+    font-size: 8px;
+    margin-top: 3px;
+}
+
+/*package*/
+.main-title-package {
+    Display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0376c1;
+    padding: 50px;
+    height: fit-content;
+    margin-bottom: 50px;
+}
+
+/* Cards */
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0 10%;
+    margin-bottom: 70px;
+}
+  
+.cards .cards-inner {
+    display: flex;
+    background-color: #d1d2d3;
+    padding: 20px;
+    border-radius: 5px;
+    transition: box-shadow 0.4s;
+}
+ 
+.cards .cards-inner .cards-icon {
+    background-image: url(https://i.ibb.co.com/vdx1Wbq/location.png);
+    filter: invert(27%) sepia(72%) saturate(2202%) hue-rotate(185deg) brightness(98%) contrast(98%);
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+}
+
+.cards .cards-inner div i {
+    margin-right: 40px;
+    font-size: 24px;
+}
+  
+.cards .cards-inner div h4 {
+    margin-left: 10px;
+}
+  
+.cards .cards-inner div p {
+    margin-top: 10px;
+    margin-left: 10px;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+/*responsive display in cards*/
+@media (min-width: 600px) {
+    .cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+}
+  
+@media (min-width: 912px) {
+    .cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+}
+  
+/*dividing line for cards*/  
+.main-separator {
+    display: flex;
+    border-radius: 3px;
+    justify-content: center;
+    width: 100%;
+    margin: 40px 0;
+}
+  
+.main-line {
+    border: 2px solid #87b8d8;
+    width: 15%;
+    border-radius: 3px;
+}
+
+/*display part headline*/  
+.headline {
+    border-top: 3px solid #666363;
+    margin-top: 20px;
+}
+  
+.headline_container {
+    text-align: center;
+}
+  
+.section_container {
+    max-width: 100%;
+    padding: 50px 10%;
+}
+  
+.headline_container h1 {
+    margin-bottom: 2rem;
+}
+  
+.headline_container p {
+    padding: 0 200px;
+}
+  
+.btn {
+    padding: 0.75rem 1.5rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: #0376c1;
+    transition: 0.3s;
+    cursor: pointer;
+    margin-top: 40px;
+}
+  
+.btn:hover {
+    background-color: #002954;
+}
+
+/*responsive display for p in headline*/
+@media (max-width: 600px) {
+    .headline_container p {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 800px) {
+    .headline_container p {
+        padding: 0 100px;
+    }
+}
+
+/*display footer*/
+footer {
+    display: grid;
+    background-color: #333;
+    color: white;
+    justify-items: center;
+}
+  
+footer > .logo-footer {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+  
+footer > .info-footer {
+    display: grid;
+    height: 100%;
+    justify-items: center;
+
+}footer .info-footer span {
+    padding-right: 30px;
+}
