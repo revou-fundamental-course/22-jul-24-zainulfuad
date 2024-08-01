@@ -22,11 +22,11 @@ function changeSlide(){
   
   for(let i=0;i<slides.length;i++){
     slides[i].style.display = "none";
-    dot[i].classList.remove(".active");
+    dot[i].classList.remove("actived");
   }
   
   slides[index].style.display= "block";
-  dot[index].classList.add(".active");
+  dot[index].classList.add("actived");
   
   index++;
   
