@@ -219,7 +219,7 @@
 }
 
 /*deviding line for main item and content list*/
-.aSeparator {
+.aseparator {
     display: flex;
     justify-content: center;
     width: 100%;
