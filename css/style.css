@@ -139,7 +139,6 @@
 }
 
 .main-content-item {
-    border: 1px solid;
     flex: 60%;
 }
 
@@ -277,7 +276,6 @@
 /*form content about*/
 .main-content-about {
     border-radius: 5px;
-    border: 1px solid;
     flex: 35%;
     background-color: #9cc7e3;
     height: fit-content;
